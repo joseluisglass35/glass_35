@@ -13,6 +13,13 @@
     <link rel="manifest" href="assets/favicon_io/site.webmanifest">
 
     <style>
+        :root {
+            --primary: #004d94;
+            --secondary: #c0265a;
+            --tercerary: #ffffff;
+            --text_dark: #303030;
+            --text_light: #f3f3f3;
+        }
         
 
         body {
@@ -21,24 +28,84 @@
             width: 100%;
             font-family: Arial, sans-serif;
             color: #313131;
+
+            margin: 0;
+            background-color: var(--primary);
+            color: var(--text_light);
+        }
+
+        h1 {
+            margin: 1rem;
         }
 
         header {
             box-sizing: border-box;
             display: flex;
             flex-direction: row;
+            position: fixed;
+            background-color: var(--tercerary);
+            color: var(--text_dark);
+            width: 100%;
         }
 
-        h1 {
-            margin: 0;
-            padding: 0;
+        nav {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            z-index: 100;
         }
+
+        nav > * {
+            margin-left: 1rem;
+        }
+
+        #top_logo {
+            width: 8rem;
+            height: 8rem;
+        }
+
+        #intro_info {
+            margin: 3rem;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        #one_liner {
+            background-color: var(--secondary);
+            margin: 2rem;
+            border-radius: 3px;
+            height: 4rem;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        
+        #one_liner p {
+            margin: 2rem;
+            font-size: 1.5rem;
+        }
+
+        #splash_screen {
+            background-image: url("assets/89818dae-b9fe-4da3-a73a-94768c290163.JPG");
+            background-size: cover;    /* Cover the entire div */
+            background-repeat: no-repeat; /* Prevent the image from repeating */
+            height: 90vh;
+
+            display: grid;
+            grid-template-rows: 5fr 1fr;
+        }
+
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Glass 35</h1>
+        <img id="top_logo" src="glass_35_logo.png">
         <nav>
             <a>Home</a>
             <a>Services</a>
@@ -48,14 +115,54 @@
     </header>
 
 
+    <div id="splash_screen">
+        <!-- <img id="splash_screen" src="assets/89818dae-b9fe-4da3-a73a-94768c290163.JPG"> -->
 
-    <div style="background-color: var(--primary);">
-        <p>This is a simple HTML file to get you started.</p>
-        <p>Feel free to customize it as you like!</p>
+        <div></div>
+        
+        <div id="one_liner">
+            <p>
+                Over 30 years of experience, one trusted name in glass - Glass 35.
+            </p>
+        </div>
 
     </div>
 
-    <img src="glass_35_logo.png">
+
+    <div id="intro_info">
+        <i>
+            With over 30 years of hands-on experience, Glass 35 was built on hard work, local pride, and the promise of doing things right. From San Antonio homes to Hill Country highways, we bring strong glass and stronger service.
+        </i>
+
+        <h1>📖 Glass 35 — Our Story</h1>
+        <p>
+            It all started with a single pane of glass in the early 1990s.
+            Back then, our founder was just a young tradesman with a truck, a toolbox, and a drive to do things right. He learned the business the old-school way — job by job, hand by hand, in neighborhoods across South Texas. Over time, his reputation grew: fast work, clean edges, and no-nonsense service.
+            As the years rolled on and the city of San Antonio expanded along the I-35 corridor, so did his experience — from simple residential windows to full commercial installations and high-end custom projects.
+            In 2024, that decades-long journey evolved into something new: Glass 35.
+            
+        </p>
+        <br>
+        <p>Named after the very highway that helped shape our service routes and our work ethic, Glass 35 stands for three things:</p>
+        <ul>
+            <li>Strength – in our materials and our word</li>
+            <li>Speed – because your time matters</li>
+            <li>Texas Pride – we’re from here, and we work like it 🇨🇱</li>
+        </ul>
+        <p>
+
+            Today, Glass 35 blends over 30 years of experience with modern tools and a team of reliable professionals. Whether it’s a broken window, a dream shower, or a full glass storefront, we’re here to get the job done — fast, fair, and done right the first time.
+            Because glass should be the last thing you worry about.
+        </p>
+
+
+    </div>
+
+
+    <script>
+        
+
+    </script>
 
 </body>
 </html>
