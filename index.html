@@ -21,8 +21,18 @@
             --text_light: #f3f3f3;
         }
         
+        html {
+            /* overflow: auto; */
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none;  /* IE and Edge */
+        }
+
+        ::-webkit-scrollbar {
+            display: none; /* Chrome, Safari */
+        }
 
         body {
+
             display: inline-block;
             margin: 0;
             width: 100%;
@@ -34,8 +44,16 @@
             color: var(--text_light);
         }
 
+        .title_back {
+            background-color: var(--secondary);
+
+        }
+
         h1 {
-            margin: 1rem;
+            margin-top: 1rem;
+            display: inline-block;
+            padding: 1rem;
+            border-radius: 5px;
         }
 
         header {
@@ -58,6 +76,11 @@
 
         nav > * {
             margin-left: 1rem;
+        }
+
+        .nav_item {
+            text-decoration: none;
+            color: var(--text_dark);
         }
 
         #top_logo {
@@ -100,6 +123,50 @@
             grid-template-rows: 5fr 1fr;
         }
 
+        #services {
+            margin: 3rem;
+
+        }
+
+        #gallery {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            width: 100%;
+        }
+
+        .gallery_img {
+            width: 100%; /* Take full width of the grid cell */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+
+        #contact {
+            margin: 3rem;
+        }
+
+
+        .contact_item {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .contact_value {
+            margin-left: 1rem;
+            margin-bottom: 1rem;
+            text-decoration-color: var(--text_light);
+            color: var(--text_light);
+        }
+
+        #forms_link {
+            text-decoration-color: var(--secondary);
+            color: var(--secondary);
+            background-color: var(--tercerary);
+            border-radius: 2px;
+            padding: .2rem;
+
+        }
+        
+
     </style>
 </head>
 <body>
@@ -107,9 +174,9 @@
     <header>
         <img id="top_logo" src="glass_35_logo.png">
         <nav>
-            <a>Home</a>
-            <a>Services</a>
-            <a>Contact</a>
+            <a class="nav_item" href="#splash_screen">Home</a>
+            <a class="nav_item" href="#services">Services</a>
+            <a class="nav_item" href="#contact">Contact</a>
         </nav>
 
     </header>
@@ -134,7 +201,7 @@
             With over 30 years of hands-on experience, Glass 35 was built on hard work, local pride, and the promise of doing things right. From San Antonio homes to Hill Country highways, we bring strong glass and stronger service.
         </i>
 
-        <h1>📖 Glass 35 — Our Story</h1>
+        <h1 class="title_back">📖 Glass 35 — Our Story</h1>
         <p>
             It all started with a single pane of glass in the early 1990s.
             Back then, our founder was just a young tradesman with a truck, a toolbox, and a drive to do things right. He learned the business the old-school way — job by job, hand by hand, in neighborhoods across South Texas. Over time, his reputation grew: fast work, clean edges, and no-nonsense service.
@@ -158,11 +225,49 @@
 
     </div>
 
+    <div id="services">
 
-    <script>
-        
+        <h1 class="title_back">Services</h1>
+        <div id="gallery">
+            <img class="gallery_img" src="assets/4c7f3a53-aafd-4103-821e-b53d2102c813.JPG">
+            <img class="gallery_img" src="assets/3113b970-e723-4295-896d-44a54687e29b.JPG">
+            <img class="gallery_img" src="assets/936b4d34-6c61-451b-bc9a-7634a862f23a.JPG">
+            <img class="gallery_img" src="assets/27856137-a28b-4ab6-974f-f8a54f37af29.JPG">
+            <img class="gallery_img" src="assets/b2f6b523-c97b-48fc-8a5a-9ff4a82257ca.JPG">
+            <img class="gallery_img" src="assets/240dd46e-0420-4252-99ea-8ecb2f10f3a3.JPG">
+            <img class="gallery_img" src="assets/b3466c6e-d20e-476f-b514-a36688f4f399.JPG">
+        </div>
+        <br>
+        <p>We provide the following services with the utmost quality and professionalism:</p>
+        <ul>
+            <li>Broken Windows</li>
+            <li>Showers</li>
+            <li>Glass Storefronts</li>
+            <li>Mirrors</li>
+        </ul>
 
-    </script>
+        <p>Call us to get a free quote! We'd love to meet you and see how we can help</p>
+
+        <br>
+        <p>Or fill out a request for a <a id="forms_link" href="https://docs.google.com/forms/d/e/1FAIpQLScezCJd3OOmwQR2TQPbMwIYf0fpTVnUrHDVVY7vZzsazQmitg/viewform?usp=dialog">quote</a></p>
+    </div>
+
+    <div id="contact">
+        <h1 class="title_back">Contact</h1>
+
+        <div class="contact_item">
+            <strong class="contact_value">Phone:</strong>
+            <a class="contact_value" href="tel:+8308225972">830-822-5972</a>
+        </div>
+
+        <div class="contact_item">
+            <strong class="contact_value">Email:</strong>
+            <a class="contact_value" href="mailto:pass1on05@yahoo.com?subject=Quote%20Request&body=Hi%20I%27d%20like%20to%20request%20a%20quote%20for%20...%0A%0APictures%3A%0A...">pass1on05@yahoo.com</a>
+        </div>
+    </div>
+
+
+
 
 </body>
 </html>
