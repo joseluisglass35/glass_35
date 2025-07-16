@@ -1,10 +1,5 @@
-# glass_35
-website for glass 35
+
+https://www.bennettsglass.com/
 
 
-
-# Wanted Example
-
-https://www.zieglerglass.com
-
-https://www.loganbennetts.com
+https://gallery.lavearphotography.com/4seasonswindows/

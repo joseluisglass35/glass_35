@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+
+    <link rel="stylesheet" href="components/main.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon_io/site.webmanifest">
+
+    <!-- components -->
+    <script src="components/top-nav.js"></script>
+    <script src="components/services.js"></script>
+
+    <style>
+
+        #gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+
+        .gallery_item {
+            margin: 1rem;
+
+        }
+        
+        .gallery_img {
+            width: 80%;
+        }
+
+        .name {
+            margin-top: 1rem;
+            display: inline-block;
+            border-radius: 5px;
+            letter-spacing: 3px;
+        }
+
+        #the_team {
+            display: flex;
+            justify-content: center;
+            height: 70vh;
+            overflow: hidden;
+        }
+
+        #the_team_img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <top-nav></top-nav>
+
+    <div class="section">
+        <h1 class="title_back">About</h1>
+        <div id="the_team">
+            <img id="the_team_img" src="assets/default_image.jpg">
+        </div>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <div id="gallery">
+            <div class="gallery_item">
+                <h2 class="name">Name</h2>
+                <img class="gallery_img" src="assets/default_image.jpg">
+                <p>is a great guy</p>
+            </div>
+            <div class="gallery_item">
+                <h2 class="name">Name</h2>
+                <img class="gallery_img" src="assets/default_image.jpg">
+                <p>is a great ladie</p>
+            </div>
+            <div class="gallery_item">
+                <h2 class="name">Name</h2>
+                <img class="gallery_img" src="assets/default_image.jpg">
+                <p>is a great guy</p>
+            </div>
+            <div class="gallery_item">
+                <h2 class="name">Name</h2>
+                <img class="gallery_img" src="assets/default_image.jpg">
+                <p>is a great ladie</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

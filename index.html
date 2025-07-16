@@ -5,122 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Glass 35</title>
 
-    <link rel="stylesheet" href="colors.css">
+    <link rel="stylesheet" href="components/main.css">
 
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
     <link rel="manifest" href="assets/favicon_io/site.webmanifest">
 
+    <!-- components -->
+    <script src="components/top-nav.js"></script>
+    <script src="components/testimonials.js"></script>
+    <script src="components/services.js"></script>
+
     <style>
-        :root {
-            --primary: #004d94;
-            --secondary: #c0265a;
-            --tercerary: #ffffff;
-            --text_dark: #303030;
-            --text_light: #f3f3f3;
-        }
-        
-        html {
-            /* overflow: auto; */
-            scrollbar-width: none; /* Firefox */
-            -ms-overflow-style: none;  /* IE and Edge */
-        }
 
-        ::-webkit-scrollbar {
-            display: none; /* Chrome, Safari */
-        }
-
-        body {
-
-            display: inline-block;
-            margin: 0;
-            width: 100%;
-            font-family: Arial, sans-serif;
-            color: #313131;
-
-            margin: 0;
-            background-color: var(--primary);
-            color: var(--text_light);
-        }
-
-        .title_back {
-            background-color: var(--secondary);
-
-        }
-
-        h1 {
-            margin-top: 1rem;
-            display: inline-block;
-            padding: 1rem;
-            border-radius: 5px;
-        }
-
-        header {
-            box-sizing: border-box;
-            display: grid;
-            grid-template-columns: .2fr 1fr .1fr;
-
-            position: fixed;
-            background-color: var(--tercerary);
-            color: var(--text_dark);
-            width: 100%;
-        }
-
-        nav {
-            box-sizing: border-box;
-            display: grid;
-            align-items: center;
-            justify-items: center;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            z-index: 100;
-
-        }
-
-        nav > * {
-            margin-left: 1rem;
-        }
-
-        .nav_item {
-            text-decoration: none;
-            color: var(--text_dark);
-            font-size: 1.4rem;
-        }
-
-        #top_logo {
-            width: 8rem;
-            height: 8rem;
-        }
-
-        #phone_section {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            color: var(--tercerary);
-            background-color: var(--secondary);
-            padding: .5rem;
-            border-radius: 10px;
-
-            margin-top: 1rem;
-        }
-
-        #phone_link {
-            text-decoration: none;
-            color: var(--tercerary);
-            font-size: .8rem;
-        }
-
-        #contact_nav_link {
-            color: var(--tercerary);
-            background-color: var(--secondary);
-            padding: .8rem;
-            border-radius: 10px;
-        }
-
-        #testimonials {
-            margin: 3rem;
-        }
 
         #intro_info {
             margin: 3rem;
@@ -131,8 +29,7 @@
         }
 
         #one_liner {
-            background-color: var(--secondary);
-            margin: 2rem;
+            margin: 3rem;
             border-radius: 3px;
             height: 4rem;
 
@@ -140,6 +37,8 @@
             justify-content: center;
             align-items: center;
             
+            color: var(--text_light);
+            background-color: var(--accent);
         }
         
         #one_liner p {
@@ -150,29 +49,13 @@
 
 
         #splash_screen {
-            background-image: url("assets/89818dae-b9fe-4da3-a73a-94768c290163.JPG");
-            background-size: cover;    /* Cover the entire div */
-            background-repeat: no-repeat; /* Prevent the image from repeating */
-            height: 90vh;
-
-            display: grid;
-            grid-template-rows: 5fr 1fr;
+            height: 65vh;
+            overflow: hidden;
         }
 
-        #services {
-            margin: 3rem;
-
-        }
-
-        #gallery {
-            display: grid;
-            grid-template-columns: repeat(7, 1fr);
+        #splash_screen_img {
             width: 100%;
-        }
-
-        .gallery_img {
-            width: 100%; /* Take full width of the grid cell */
-            height: auto; /* Maintain aspect ratio */
+            /* height: 100%; */
         }
 
 
@@ -189,8 +72,8 @@
         .contact_value {
             margin-left: 1rem;
             margin-bottom: 1rem;
-            text-decoration-color: var(--text_light);
-            color: var(--text_light);
+            text-decoration-color: var(--text_dark);
+            color: var(--text_dark);
         }
 
         #forms_link {
@@ -201,67 +84,38 @@
             padding: .2rem;
 
         }
-        
 
     </style>
 </head>
 <body>
 
-    <header>
-        <img id="top_logo" src="glass_35_logo.png">
-        <nav>
-            <a class="nav_item" href="#testimonials">Testimonials</a>
-            <a class="nav_item" href="#services">Services</a>
-            <a class="nav_item" href="#intro_info">About</a>
-            <div>
-                <a id="contact_nav_link" class="nav_item" href="#contact">Contact</a>
-                <div id="phone_section">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
-                    </svg>
-                    <a id="phone_link" type="Phone" href="tel:435-011-1121">435-011-1121</a>
-                </div>
-            </div>
-        </nav>
-        <div></div>
-
-    </header>
+    <top-nav></top-nav>
 
 
     <div id="splash_screen">
-        <!-- <img id="splash_screen" src="assets/89818dae-b9fe-4da3-a73a-94768c290163.JPG"> -->
+        <img id="splash_screen_img" src="assets/window_picture.JPG">
 
         <div></div>
         
-        <div id="one_liner">
-            <p>
-                Over 30 years of experience, one trusted name in glass - Glass 35.
-            </p>
-        </div>
 
     </div>
 
 
-    <div id="testimonials">
 
-        <i>
-            With over 30 years of hands-on experience, Glass 35 was built on hard work, local pride, and the promise of doing things right. From San Antonio homes to Hill Country highways, we bring strong glass and stronger service.
-        </i>
-        <br>
-
-        <h1 class="title_back">Testimonials</h1>
-
+    <div id="one_liner">
+        <p>
+            Over 30 years of experience, one trusted name in glass - Glass 35.
+        </p>
     </div>
+
+
+    <testimonials-div></testimonials-div>
 
     <div id="intro_info">
 
-        <h1 class="title_back">📖 Glass 35 — Our Story</h1>
+        <h1 class="title_back">4 Season Windows — Our Story</h1>
         <p>
-            It all started with a single pane of glass in the early 1990s.
-            Back then, our founder was just a young tradesman with a truck, a toolbox, and a drive to do things right. He learned the business the old-school way — job by job, hand by hand, in neighborhoods across South Texas. Over time, his reputation grew: fast work, clean edges, and no-nonsense service.
-            As the years rolled on and the city of San Antonio expanded along the I-35 corridor, so did his experience — from simple residential windows to full commercial installations and high-end custom projects.
-            In 2024, that decades-long journey evolved into something new: Glass 35.
-            
+            It all started with a single pane of glass in the early 1990s. Back then, our founder was just a young tradesman with a truck, a toolbox, and a drive to do things right. He learned the business the old-school way — job by job, hand by hand, in neighborhoods across South Texas. Over time, his reputation grew: fast work, clean edges, and no-nonsense service. As the years rolled on and the city of San Antonio expanded along the I-35 corridor, so did his experience — from simple residential windows to full commercial installations and high-end custom projects. In 2024, that decades-long journey evolved into something new: Glass 35. 
         </p>
         <br>
         <p>Named after the very highway that helped shape our service routes and our work ethic, Glass 35 stands for three things:</p>
@@ -271,40 +125,12 @@
             <li>Texas Pride – we’re from here, and we work like it 🇨🇱</li>
         </ul>
         <p>
-
-            Today, Glass 35 blends over 30 years of experience with modern tools and a team of reliable professionals. Whether it’s a broken window, a dream shower, or a full glass storefront, we’re here to get the job done — fast, fair, and done right the first time.
-            Because glass should be the last thing you worry about.
+            Today, Glass 35 blends over 30 years of experience with modern tools and a team of reliable professionals. Whether it’s a broken window, a dream shower, or a full glass storefront, we’re here to get the job done — fast, fair, and done right the first time. Because glass should be the last thing you worry about. 
         </p>
-
-
     </div>
 
-    <div id="services">
+    <services-div></services-div>
 
-        <h1 class="title_back">Services</h1>
-        <div id="gallery">
-            <img class="gallery_img" src="assets/4c7f3a53-aafd-4103-821e-b53d2102c813.JPG">
-            <img class="gallery_img" src="assets/3113b970-e723-4295-896d-44a54687e29b.JPG">
-            <img class="gallery_img" src="assets/936b4d34-6c61-451b-bc9a-7634a862f23a.JPG">
-            <img class="gallery_img" src="assets/27856137-a28b-4ab6-974f-f8a54f37af29.JPG">
-            <img class="gallery_img" src="assets/b2f6b523-c97b-48fc-8a5a-9ff4a82257ca.JPG">
-            <img class="gallery_img" src="assets/240dd46e-0420-4252-99ea-8ecb2f10f3a3.JPG">
-            <img class="gallery_img" src="assets/b3466c6e-d20e-476f-b514-a36688f4f399.JPG">
-        </div>
-        <br>
-        <p>We provide the following services with the utmost quality and professionalism:</p>
-        <ul>
-            <li>Broken Windows</li>
-            <li>Showers</li>
-            <li>Glass Storefronts</li>
-            <li>Mirrors</li>
-        </ul>
-
-        <p>Call us to get a free quote! We'd love to meet you and see how we can help</p>
-
-        <br>
-        <p>Or fill out a request for a <a id="forms_link" href="https://docs.google.com/forms/d/e/1FAIpQLScezCJd3OOmwQR2TQPbMwIYf0fpTVnUrHDVVY7vZzsazQmitg/viewform?usp=dialog">quote</a></p>
-    </div>
 
     <div id="contact">
         <h1 class="title_back">Contact</h1>
