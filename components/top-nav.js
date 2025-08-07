@@ -83,11 +83,11 @@ class TopNav extends HTMLElement {
             }
         </style>
         <header>
-            <a href="/">
+            <a href="/index.html">
                 <img id="top_logo" src="assets/glass_35_logo.png">
             </a>
             <nav>
-                <a class="nav_item spaced_title" href="/">Home</a>
+                <a class="nav_item spaced_title" href="/index.html">Home</a>
                 <a class="nav_item spaced_title" href="Services.html">Services</a>
                 <a class="nav_item spaced_title" href="About.html">About</a>
                 <div>
