@@ -47,9 +47,8 @@ class TopNav extends HTMLElement {
             }
 
             #top_logo {
-                margin: 1rem;
-                width: 8rem;
-                height: 8rem;
+                width: 10rem;
+                height: 10rem;
             }
 
             #phone_section {
@@ -88,7 +87,7 @@ class TopNav extends HTMLElement {
                 <img id="top_logo" src="assets/glass_35_logo.png">
             </a>
             <nav>
-                <a class="nav_item spaced_title" href="Testimonials.html">Testimonials</a>
+                <a class="nav_item spaced_title" href="index.html">Home</a>
                 <a class="nav_item spaced_title" href="Services.html">Services</a>
                 <a class="nav_item spaced_title" href="About.html">About</a>
                 <div>
