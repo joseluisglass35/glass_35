@@ -1,5 +1,6 @@
+# Glass 35
+This is a static website hosting on github pages currently.
 
-https://www.bennettsglass.com/
 
+It's tied to this gmail and github account
 
-https://gallery.lavearphotography.com/4seasonswindows/
