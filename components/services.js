@@ -54,7 +54,7 @@ class Services extends HTMLElement {
 
                 <p>Call us to get a free quote! We'd love to meet you and see how we can help</p>
 
-                <p>Or fill out a request for a quote <a id="forms_link" href="https://docs.google.com/forms/d/e/1FAIpQLScezCJd3OOmwQR2TQPbMwIYf0fpTVnUrHDVVY7vZzsazQmitg/viewform?usp=dialog">here.</a></p>
+                <p>Or fill out a request for a quote <a id="forms_link" href="https://docs.google.com/forms/d/e/1FAIpQLScK4D_RnFWVg4ln7hCepnZbL1RQlXHXmJGJlWwnbsZGDsD4Xw/viewform?usp=dialog">here.</a></p>
             </div>
         `;
     }
