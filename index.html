@@ -46,7 +46,13 @@
 
         #splash_screen_img {
             width: 100%;
-            /* height: 100%; */
+            height: 70vh;
+            object-fit: cover;
+            position: relative;
+            top: 1rem;
+            z-index: -1;
+
+            object-position: center 0;
         }
 
 
@@ -76,6 +82,22 @@
 
         }
 
+        /* CSS rules for all devices that are not desktops (phones + tablets) */
+        @media (max-width: 1024px) {
+            #splash_screen_img {
+                width: 100%;
+                height: 50vh;
+                /* left: -1rem; */
+            }
+
+
+            .contact_item {
+                display: flex;
+                flex-direction: column;
+                max-width: 100%;
+                word-break: break-word;
+            }
+        }
     </style>
 </head>
 <body>

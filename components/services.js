@@ -16,6 +16,8 @@ class Services extends HTMLElement {
                     display: grid;
                     grid-template-columns: 1fr 1fr 1fr;
                     width: 100%;
+                    height: 100%;
+                    margin-bottom: 1rem;
                 }
 
                 .service{
@@ -24,8 +26,17 @@ class Services extends HTMLElement {
                 }
 
                 .services_img {
-                    width: 100%; /* Take full width of the grid cell */
-                    height: auto; /* Maintain aspect ratio */
+
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    position: relative;
+                    z-index: -1;
+                }
+
+                /* CSS rules for all devices that are not desktops (phones + tablets) */
+                @media (max-width: 1024px) {
+                    
                 }
 
             </style>
@@ -43,7 +54,6 @@ class Services extends HTMLElement {
                         <img class="services_img" src="assets/240dd46e-0420-4252-99ea-8ecb2f10f3a3.JPG">
                     </div>
                 </div>
-                <br>
                 <p>We provide the following services with the utmost quality and professionalism:</p>
                 <ul>
                     <li>Broken Windows</li>

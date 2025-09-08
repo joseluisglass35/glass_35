@@ -40,7 +40,7 @@ class TopNav extends HTMLElement {
             .nav_item {
                 text-decoration: none;
                 color: var(--text_dark);
-                font-size: 1.4rem;
+                font-size: 1.7rem;
                 width: 100%;
                 text-align: center;
             }
@@ -92,14 +92,19 @@ class TopNav extends HTMLElement {
 
                 #hamburger {
                     display: flex;
-                    justify-content: center;
+                    justify-content: end;
                     align-items: center;
+                }
+
+
+                #hamburger_svg {
+                    margin-right: 2rem;
                 }
 
 
                 header {
                     grid-template-columns: 1fr 1fr;
-                    
+                    width: 100vw;
                 }
 
                 nav {
@@ -129,6 +134,7 @@ class TopNav extends HTMLElement {
                 #phone_section {
                     display: none;
                 }
+
 
                 .main_nav_closed {
                     overflow: hidden; /* To hide overflowing content during transition */
